@@ -52,6 +52,11 @@ if pgrep -x steam >/dev/null; then
   # wait a few seconds for Steam to exit
   sleep 1
 fi
+if pgrep -x Discord >/dev/null; then
+  pkill -x Discord
+  # wait a few seconds for Steam to exit
+  sleep 1
+fi
 
 # ---------------------------
 # Step 2: run your clean-close-apps script for other windows
